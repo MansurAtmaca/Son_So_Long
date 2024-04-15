@@ -1,0 +1,78 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/04 09:45:11 by matmaca           #+#    #+#             */
+/*   Updated: 2024/04/15 17:51:30 by matmaca          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "so_long.h"
+#include <stdlib.h>
+# include "../minilibx/mlx.h"
+
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+void	ft_free(t_win *win, int a)
+{
+	int	i;
+
+	if (win->map.map)
+	{
+		i = 0;
+		while (i < win->map.height && win->map.map[i])
+		{
+			free(win->map.map[i]);
+			i++;
+		}
+		free(win->map.map);
+	}
+	if (win->copy_map.map)
+	{
+		i = 0;
+		while (i < win->copy_map.height && win->copy_map.map[i])
+		{
+			free(win->copy_map.map[i]);
+			i++;
+		}
+		free(win->copy_map.map);
+	}
+	exit (a);
+}
+
+void	close_images(t_win *win)
+{
+	if (win->coin)
+		mlx_destroy_image(win->mlx_ptr, win->coin);
+	if (win->background)
+		mlx_destroy_image(win->mlx_ptr, win->background);
+	if (win->wall)
+		mlx_destroy_image(win->mlx_ptr, win->wall);
+	if (win->exit)
+		mlx_destroy_image(win->mlx_ptr, win->exit);
+	if (win->player.player)
+		mlx_destroy_image(win->mlx_ptr, win->player.player);
+	if (win->mlx_ptr)
+		mlx_destroy_window(win->mlx_ptr, win->mlx_win);
+}
+
+int	close_game(void *param)
+{
+	t_win	*win;
+
+	win = param;
+	close_images(win);
+	ft_free(win, 0);
+	return (1);
+}
