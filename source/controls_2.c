@@ -6,13 +6,13 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:54:58 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/15 17:50:38 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/16 10:32:43 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdlib.h>
-# include "../printf/ft_printf.h"
+#include "../printf/ft_printf.h"
 
 void	copy_map(t_win *win, t_map *map)
 {

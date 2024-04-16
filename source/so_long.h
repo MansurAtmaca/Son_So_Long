@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansurcanatmaca <mansurcanatmaca@studen    +#+  +:+       +#+        */
+/*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:18:01 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/15 22:42:05 by mansurcanat      ###   ########.fr       */
+/*   Updated: 2024/04/16 10:30:05 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ typedef struct s_win
 	int		py;
 }	t_win;
 
+//functions
 char	**ft_split(char const *s, char c);
 int		ft_strlen(const char *str);
 char	*ft_strdup(const char *s1);
-
 
 //map_funcs
 void	get_map(t_win *win, char *path);

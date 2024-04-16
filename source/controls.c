@@ -6,12 +6,12 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:14:06 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/15 17:50:41 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/16 10:09:40 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-# include "../printf/ft_printf.h"
+#include "../printf/ft_printf.h"
 
 void	wall_control(t_win *win, int height, int width)
 {

@@ -2,7 +2,7 @@ SRCS = source/main.c source/map_funcs.c source/check_funcs.c source/controls.c s
 LFLAGS = -framework AppKit -framework OpenGL -L./minilibx -lmlx -lz
 CFLAGS = -Wall -Wextra -Werror -I./minilibx -g
 GNL = get_next_line/get_next_line_utils.c get_next_line/get_next_line.c 
-PRINTF =$(wildcard printf/*c)
+PRINTF = printf/ft_itoa.c printf/ft_printf_utils.c printf/ft_printf.c
 GNLOBJS = $(GNL:.c=.o)
 PRINTFOBJS = $(PRINTF:.c=.o)
 OBJS = $(SRCS:.c=.o)

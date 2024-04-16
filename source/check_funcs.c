@@ -3,26 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   check_funcs.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansurcanatmaca <mansurcanatmaca@studen    +#+  +:+       +#+        */
+/*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:12:06 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/15 22:41:21 by mansurcanat      ###   ########.fr       */
+/*   Updated: 2024/04/16 10:43:05 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdlib.h>
-#include <unistd.h>
-# include "../printf/ft_printf.h"
-
+#include "../printf/ft_printf.h"
 
 void	check_file_path(char *file_name)
 {
 	int	i;
 
 	i = ft_strlen(file_name);
-	if (file_name[i - 1] != 'r' && file_name[i - 2] != 'e'
-		&& file_name[i - 3] != 'b' && file_name[i - 4] != '.')
+	if (file_name[i - 1] != 'r' || file_name[i - 2] != 'e'
+		|| file_name[i - 3] != 'b' || file_name[i - 4] != '.')
 	{
 		ft_printf("Wrong path name!!\n");
 		exit(1);
@@ -34,10 +32,11 @@ void	empty_check(char *line)
 	if (*line == '\n')
 	{
 		ft_printf("Empty Line in Map\n");
-		free (line);
+		free(line);
 		exit(1);
 	}
 }
+
 void	init_values(t_win *win)
 {
 	win->player_count = 0;

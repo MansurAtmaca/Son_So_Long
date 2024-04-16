@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansurcanatmaca <mansurcanatmaca@studen    +#+  +:+       +#+        */
+/*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:09:18 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/15 22:41:11 by mansurcanat      ###   ########.fr       */
+/*   Updated: 2024/04/16 10:43:50 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-# include "../printf/ft_printf.h"
-# include "../minilibx/mlx.h"
+#include "../printf/ft_printf.h"
+#include "../minilibx/mlx.h"
 
 void	put_images_right_places(t_win *win, char c, int x, int y)
 {

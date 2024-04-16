@@ -6,13 +6,13 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 09:45:11 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/15 17:51:30 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/16 10:33:53 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdlib.h>
-# include "../minilibx/mlx.h"
+#include "../minilibx/mlx.h"
 
 int	ft_strlen(const char *str)
 {
